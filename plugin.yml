@@ -1,0 +1,16 @@
+name: CMFR
+author: tiakin69
+version: 0.2
+main: Tiakin.main.cmfr
+api-version: 1.16
+commands:
+  giveweapon:
+    description: 'pour donner une arme'
+    permission: CMFR.giveweapon
+  staffmod:
+    description: 'pour switch son inventaire entre le normal et le mode staff'
+    permission: CMFR.staffmod
+    aliases: [sm, admin, staff, modstaff, modo]
+  rules:
+    description: 'pour lire les regles'
+    aliases: [règle]
