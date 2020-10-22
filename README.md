@@ -14,8 +14,8 @@ Salut à vous ! j'ai décidé de faire un git qui serait surement bien pratique.
  N'hésitez pas à changer le webhook si jamais un con de dev veut vous faire chié puisqu'il sait fait viré car il pue la merde.
  Puisque sinon il pourra envoyer des messages à partir du webhook.
    >https://github.com/Tiakin/CMFR/blob/880ae88cc4930c9cf186a51d5de2df6915f4b927/src/Tiakin/main/cmfr.java#L124
-   s
-   
+>
+
 > Pour me contacter : Tiakin#6715 
 
 > **Attention ! *je ne suis pas la pour apprendre aux gens a dev***, bien que je pense que si vous êtes la vous n'avez pas besoin de moi pour apprendre à faire des variables c;
