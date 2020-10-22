@@ -5,7 +5,7 @@ Salut à vous ! j'ai décidé de faire un git qui serait surement bien pratique.
  Mais je pourrais quand même vous aider c:
  en gros quand un dev prend le plugin pour l'update qu'il n'hésite pas a update le git.
  donc pour les collab (je sais pas si vous pouvez) faites des invites pour les nouveaux devs du serv pour que le plugin soit update pour les autres dev aussi(question de practicité)
- ## manière de dev
+ ## Manière de dev
  Alors je sais pertinemment que les prochains dev qui verront le code que j'ai posté peuvent (même si je ne le pense pas) le critiqué ou je ne sais quelle connerie oublier pas :
  Chacun sa manière de coder.
  Même si je pense que mon code est plutôt lisible; le problème c'est que je n'ai malheureusement pas mis énormément de commentaire.
