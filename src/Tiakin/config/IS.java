@@ -3,7 +3,7 @@ package Tiakin.config;
 import java.util.Map;
 
 import org.bukkit.inventory.ItemStack;
-
+ 
 public class IS {
 	
 	 public static Map<String, Object> serialize(ItemStack item){

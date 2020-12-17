@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
-
+ 
 public class folder {
 	String file;
 	String storagetype;
