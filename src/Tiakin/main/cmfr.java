@@ -42,14 +42,33 @@ import Tiakin.config.folder;
 public class cmfr extends JavaPlugin implements Listener {
 
 	folder z;
-	
+	//salut
 	public void onEnable() {
 		 Bukkit.getPluginManager().registerEvents(this, this);
 		 getCommand("staffmod").setExecutor(new commande());
 		 getCommand("giveweapon").setExecutor(new commande());
 		 getCommand("regle").setExecutor(new commande());
-		 
-		  }
+		 z = new folder("CMFR", null, "");
+ 	     if(z.readfolder() != null) {
+    	 	 
+ 		 }else {
+ 			 z.setfolder();
+ 			 z = new folder("CMFR", "LobbyName", "lobby");
+ 			 z.addinfolder();
+ 			 z = new folder("CMFR", "LobbyXYZ", "0 79 0");
+			 z.addinfolder();
+			 z = new folder("CMFR", "SurvieName", "Survie_Beta");
+ 			 z.addinfolder();
+ 			 z = new folder("CMFR", "SurvieXYZ", "86 74 189");
+			 z.addinfolder();
+			 z = new folder("CMFR", "EndName", "Survie_Beta_the_end");
+ 			 z.addinfolder();
+ 			 z = new folder("CMFR", "EndXYZ", "0 74 0");
+			 z.addinfolder();
+ 		 }
+ 	     
+ 	     
+		 }
 
  @EventHandler
   public void onchat(AsyncPlayerChatEvent a) {
@@ -154,8 +173,12 @@ public class cmfr extends JavaPlugin implements Listener {
  @EventHandler
   public void onentityspawn(PlayerJoinEvent e){
      Player p = e.getPlayer();
-     p.teleport(new Location(Bukkit.getWorld("lobby"), 0, 64, 0));
-     p.teleport(new Location(Bukkit.getWorld("lobby"), 0, 64, 0));
+     z = new folder("CMFR", "LobbyName", "");
+     String lname = z.readfolder();
+     z = new folder("CMFR", "LobbyXYZ", "");
+     String[] lXYZ = z.readfolder().split(" ");
+     p.teleport(new Location(Bukkit.getWorld(lname), Integer.parseInt(lXYZ[0]), Integer.parseInt(lXYZ[1]), Integer.parseInt(lXYZ[2])));
+     p.teleport(new Location(Bukkit.getWorld(lname), Integer.parseInt(lXYZ[0]), Integer.parseInt(lXYZ[1]), Integer.parseInt(lXYZ[2])));
 	 //premier join
      
      File pluginfile = new File("plugins/storage/player/"+p.getName()+".yml");
@@ -184,28 +207,28 @@ public class cmfr extends JavaPlugin implements Listener {
 			 
 		 }else if(p.getName().equalsIgnoreCase("SuperNoobYT") && CustomByName <= 4){
 			 
-			 e.setJoinMessage("§8-->§7C'est §csuperman §7! Ah non c'est juste §c"+ p.getName()+".");
+			 e.setJoinMessage("§8-->§7C'est §csuperman §7! Ah non c'est juste §cSuperNoob§8.");
 			 
 		 }else if(p.getName().equalsIgnoreCase("Lamatt2") && CustomByName <= 4){
 			 
-			 e.setJoinMessage("§8-->§7C'est vraiment §4"+ p.getName()+"§7 qui a rejoint le serveur ? En espérant qu'il ne crash pas...");
+			 e.setJoinMessage("§8-->§7C'est vraiment §4Lamatt§7 qui a rejoint le serveur ? En espérant qu'il ne crash pas...");
 			 
 		 }else if(p.getName().equalsIgnoreCase("PulsI0") && CustomByName <= 4){
 			 
-			 e.setJoinMessage("§8-->§7Heyyyy, §4"+ p.getName()+"§7 est la pour perdre son stuff !");
+			 e.setJoinMessage("§8-->§7Heyyyy, §4PulsI0§7 est la pour perdre son stuff !");
 			 
 		 }
 		 
 		 
 		 else {
-			 int message = new java.util.Random().nextInt(4) + 1;
+			 int message = new java.util.Random().nextInt(7) + 1;
 			 if(message == 1) {
 				 
-				 e.setJoinMessage("§8-->§8Le §7Serveur §8a rejoint §7"+p.getName()+"§8 ... euh enfaîtes pas si sûr :/");
+				 e.setJoinMessage("§8-->Le §7Serveur §8a rejoint §7"+p.getName()+"§8 ... euh enfaîtes pas si sûr :/");
 		 
 			 }else if(message == 2) {
 				 
-				 e.setJoinMessage("§8-->§8Il est là, §l§9Herobrine ! §r§8ah non c'est §7"+p.getName()+"§8.");
+				 e.setJoinMessage("§8-->Il est là, §l§9Herobrine ! §r§8ah non c'est §7"+p.getName()+"§8.");
 		 
 			 }else if(message == 3) {
 				 
@@ -213,13 +236,29 @@ public class cmfr extends JavaPlugin implements Listener {
 		 
 			 }else if(message == 4) {
 				 
-				 e.setJoinMessage("§8-->§8§oÉtonnant.. §7"+p.getName()+"§8 a retrouvé son chemin !");
+				 e.setJoinMessage("§8-->§oÉtonnant.. §r§7"+p.getName()+"§8 a retrouvé son chemin !");
+		 
+			 }else if(message == 5) {
+				 
+				 e.setJoinMessage("§8-->§oMagnifique §r§7"+p.getName()+"§8 est apparu dans ce monde !");
+		 
+			 }else if(message == 6) {
+				 
+				 e.setJoinMessage("§8-->oh non §7"+p.getName()+"§8 est venu pour tout explosé !");
+		 
+			 }else if(message == 7) {
+				 
+				 e.setJoinMessage("§8-->C'est un §7enderman§8 ! Ah non c'est §7"+p.getName()+"§8 mais ne le regardez quand même pas dans les yeux !");
 		 
 			 }
 		 }
     }
-	 send("Youpi ! "+p.getName()+" est arrivé !", "arrivé", "https://cdn.discordapp.com/attachments/689970299441250304/690160545310965854/plus.png");
-  if(p.getWorld().getName().equalsIgnoreCase("lobby")) {
+	 if(p.getName().equalsIgnoreCase("tiakin69"))
+		 send("Oh wow ! C'est "+p.getName()+" qui est arrivé ! Mais quel rareté !", "arrivé", "https://cdn.discordapp.com/attachments/689970299441250304/690160545310965854/plus.png");
+	 else 
+		 send("Youpi ! "+p.getName()+" est arrivé !", "arrivé", "https://cdn.discordapp.com/attachments/689970299441250304/690160545310965854/plus.png");
+     
+	 if(p.getWorld().getName().equalsIgnoreCase(z.readfolder())) {
 	  
 	  p.getInventory().clear();
 	  
@@ -265,8 +304,12 @@ public class cmfr extends JavaPlugin implements Listener {
  @EventHandler
   public void onentitygotoend(PlayerChangedWorldEvent e){
 	 Player p = e.getPlayer();
-	 if(p.getWorld().getName().equalsIgnoreCase("Survival_the_end"))
-		 p.teleport(new Location(p.getWorld(), -69, 60, -128));
+	 z = new folder("CMFR", "EndName", "");
+     String ename = z.readfolder();
+     z = new folder("CMFR", "EndXYZ", "");
+     String[] eXYZ = z.readfolder().split(" ");
+	 if(p.getWorld().getName().equalsIgnoreCase(ename));
+		 p.teleport(new Location(p.getWorld(), Integer.parseInt(eXYZ[0]), Integer.parseInt(eXYZ[1]), Integer.parseInt(eXYZ[2])));
  }
 
  @EventHandler 
@@ -278,7 +321,11 @@ public class cmfr extends JavaPlugin implements Listener {
 	 InventoryView name = e.getView();
 	 if (name.getTitle().equals("§eCMFR")) {
 		 if (clicked.getType() == Material.GRASS_BLOCK) {
-			 p.teleport(new Location(Bukkit.getWorld("Survie"), 0, 67, 0));
+			 z = new folder("CMFR", "SurvieName", "");
+		     String sname = z.readfolder();
+		     z = new folder("CMFR", "SurvieXYZ", "");
+		     String[] sXYZ = z.readfolder().split(" ");
+			 p.teleport(new Location(Bukkit.getWorld(sname), Integer.parseInt(sXYZ[0]), Integer.parseInt(sXYZ[1]), Integer.parseInt(sXYZ[2])));
 		 }
 		 e.setCancelled(true);
 	 }else if (name.getTitle().equals("§eRègles")) {
