@@ -18,7 +18,7 @@ import Tiakin.config.folder;
 
 public class commande implements  CommandExecutor, Listener {
 	folder z;
-	String empty = null;
+	String empty = null; 
 public boolean onCommand(CommandSender sender, Command cmd, String msg, String[] args)	{
 	
     if (sender instanceof Player) { 

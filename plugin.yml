@@ -1,6 +1,6 @@
 name: CMFR
 author: tiakin69
-version: 0.2
+version: 0.3
 main: Tiakin.main.cmfr
 api-version: 1.16
 commands:
