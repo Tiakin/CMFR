@@ -42,7 +42,6 @@ import Tiakin.config.folder;
 public class cmfr extends JavaPlugin implements Listener {
 
 	folder z;
-	//salut
 	public void onEnable() {
 		 Bukkit.getPluginManager().registerEvents(this, this);
 		 getCommand("staffmod").setExecutor(new commande());
