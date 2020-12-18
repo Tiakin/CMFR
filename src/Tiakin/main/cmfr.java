@@ -307,7 +307,7 @@ public class cmfr extends JavaPlugin implements Listener {
      String ename = z.readfolder();
      z = new folder("CMFR", "EndXYZ", "");
      String[] eXYZ = z.readfolder().split(" ");
-	 if(p.getWorld().getName().equalsIgnoreCase(ename));
+	 if(p.getWorld().getName().equalsIgnoreCase(ename))
 		 p.teleport(new Location(p.getWorld(), Integer.parseInt(eXYZ[0]), Integer.parseInt(eXYZ[1]), Integer.parseInt(eXYZ[2])));
  }
 
