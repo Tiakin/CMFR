@@ -11,6 +11,6 @@ commands:
     description: 'pour switch son inventaire entre le normal et le mode staff'
     permission: CMFR.staffmod
     aliases: [sm, admin, staff, modstaff, modo]
-  rules:
-    description: 'pour lire les regles'
-    aliases: [règle]
+  règles:
+    description: 'pour lire les règles'
+    aliases: [rules]

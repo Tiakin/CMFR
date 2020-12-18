@@ -46,7 +46,7 @@ public class cmfr extends JavaPlugin implements Listener {
 		 Bukkit.getPluginManager().registerEvents(this, this);
 		 getCommand("staffmod").setExecutor(new commande());
 		 getCommand("giveweapon").setExecutor(new commande());
-		 getCommand("regle").setExecutor(new commande());
+		 getCommand("règles").setExecutor(new commande());
 		 z = new folder("CMFR", null, "");
  	     if(z.readfolder() != null) {
     	 	 
