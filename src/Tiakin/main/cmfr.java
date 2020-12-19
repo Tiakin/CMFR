@@ -274,8 +274,8 @@ public class cmfr extends JavaPlugin implements Listener {
  @EventHandler
   public void onplayeruse(PlayerInteractEvent e) {
 	 Player p = e.getPlayer();
-	 
-	    if (p.getWorld().getName().equalsIgnoreCase("lobby")) {
+	 z = new folder("CMFR", "LobbyName", "");
+	    if (p.getWorld().getName().equalsIgnoreCase(z.readfolder())) {
 	    	if (p.getInventory().getItemInMainHand().getType() == Material.NAME_TAG) {
 	    		 e.setCancelled(true);
 	    		if(e.getAction() != Action.PHYSICAL) {
