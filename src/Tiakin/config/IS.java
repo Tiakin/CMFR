@@ -1,4 +1,4 @@
-package Tiakin.config;
+package src.Tiakin.config;
 
 import java.util.Map;
 

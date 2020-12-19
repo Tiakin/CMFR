@@ -257,7 +257,7 @@ public class cmfr extends JavaPlugin implements Listener {
 	 else 
 		 send("Youpi ! "+p.getName()+" est arrivé !", "arrivé", "https://cdn.discordapp.com/attachments/689970299441250304/690160545310965854/plus.png");
      
-	 if(p.getWorld().getName().equalsIgnoreCase(z.readfolder())) {
+	 if(p.getWorld().getName().equalsIgnoreCase(lname)) {
 	  
 	  p.getInventory().clear();
 	  
